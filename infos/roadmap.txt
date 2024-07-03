@@ -1,0 +1,16 @@
+* Recebe Insurance Quote
+* Faz a busca usando os valores de productId e offerId no serviço de cátalogo
+* Recebe o retorno da Oferta
+* Valida se a oferta existe e esta ativa
+* Valida se as cobertas da cotação existem na oferta
+* Valida se as assitencias da cotação existem na oferta
+* Valida se o valor total do prêmio mensal esta dentro dos valores maximo e minimos da oferta
+* Valida se o valor total da somatória das coberturas esta dentro do valor maximo de cobertura da oferta
+* Caso seja válida
+    * Salva no DB
+    * Envia cotação para tópico, quote received
+    * Retorna sucesso para cliente
+* Caso inválida
+    * Retorna erro indicando quais problemas acontecerem, para o cliente consertar e enviar novamente
+
+* Endpoint de consulta via id da cotação, lista por cliente
